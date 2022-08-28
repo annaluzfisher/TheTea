@@ -29,3 +29,84 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3491169680472270300)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mShare Load (2.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-27 19:52:01 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 19:52:11 -0700
+  
+SyntaxError (/Users/postgres/Desktop/Tea/app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 19:52:45 -0700
+  
+SyntaxError (/Users/postgres/Desktop/Tea/app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/shares_controller.rb:21: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 19:57:20 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"hi", "share"=>{"content"=>"hi"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 10.1ms | Allocations: 2891)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:00:33 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 136)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:00:34 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"hi", "share"=>{"content"=>"hi"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started GET "/" for ::1 at 2022-08-27 20:05:05 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/postgres/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/postgres/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 329)
+Completed 200 OK in 3ms (Views: 2.1ms | Allocations: 1228)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:05:24 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{}}
+Completed 500 Internal Server Error in 0ms (Allocations: 138)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:05:24 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"hi", "share"=>{"content"=>"hi"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 118)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
