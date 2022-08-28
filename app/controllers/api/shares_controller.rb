@@ -10,6 +10,10 @@ class Api::SharesController < ApplicationController
   end
 
   def random
+    shares = Share.all
+    @share = shares.sample
+    debugger
+    render json: @share
   end
 
   def create
