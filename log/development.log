@@ -110,3 +110,246 @@ ArgumentError (wrong number of arguments (given 0, expected 1)):
   
 app/controllers/api/shares_controller.rb:19:in `share_params'
 app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:07:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.4ms | Allocations: 6475)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:09:00 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"hi", "share"=>{"content"=>"hi"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 2.4ms | Allocations: 1141)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:19:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:28:11 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"first try", "share"=>{"content"=>"first try"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 4.1ms | Allocations: 1105)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:20:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:28:32 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"try", "share"=>{"content"=>"try"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 118)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:20:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:29:46 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"userId"=>0, "content"=>"testing", "share"=>{"content"=>"testing"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:20:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:31:28 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"userId"=>0, "content"=>"testing"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 116)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/shares_controller.rb:20:in `share_params'
+app/controllers/api/shares_controller.rb:14:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:35:34 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"userId"=>0, "content"=>"testing"}}
+[31mUnpermitted parameter: :userId. Context: { controller: Api::SharesController, action: create, request: #<ActionDispatch::Request:0x0000000106cbd868>, params: {"share"=>{"userId"=>0, "content"=>"testing"}, "format"=>JSON, "controller"=>"api/shares", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 8.2ms | Allocations: 6501)
+
+
+  
+NameError (undefined local variable or method `console' for #<Api::SharesController:0x00000000005190>
+
+    console.log('in the shares controller, share_params', share_params)
+    ^^^^^^^):
+  
+app/controllers/api/shares_controller.rb:15:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:36:27 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"userId"=>0, "content"=>"I am afraid I will never love again"}}
+[31mUnpermitted parameter: :userId. Context: { controller: Api::SharesController, action: create, request: #<ActionDispatch::Request:0x0000000106dd59f8>, params: {"share"=>{"userId"=>0, "content"=>"I am afraid I will never love again"}, "format"=>JSON, "controller"=>"api/shares", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 4.3ms | Allocations: 2584)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass
+
+    @share.save
+          ^^^^^):
+  
+app/controllers/api/shares_controller.rb:15:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:37:24 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"userId"=>0, "content"=>"I am afraid I will never love again"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.2ms | Allocations: 2430)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass
+
+    @share.save
+          ^^^^^):
+  
+app/controllers/api/shares_controller.rb:16:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:41:45 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"testing"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.3ms | Allocations: 2430)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass
+
+    @share.save
+          ^^^^^):
+  
+app/controllers/api/shares_controller.rb:16:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:42:53 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"testing"}}
+Completed 500 Internal Server Error in 127344ms (ActiveRecord: 2.0ms | Allocations: 145608)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass
+
+    @share.save
+          ^^^^^):
+  
+app/controllers/api/shares_controller.rb:16:in `create'
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:45:01 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"I am afraid I won't recover"}}
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:16:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:16:in `create'
+Completed 204 No Content in 56ms (ActiveRecord: 31.0ms | Allocations: 9140)
+
+
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:45:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"I am afraid I won't recover"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:16:in `create'
+Completed   in 22804ms (ActiveRecord: 20.6ms | Allocations: 135172)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:46:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"Im afraid to forget but more afraid I will never forget"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 31ms (ActiveRecord: 5.7ms | Allocations: 14866)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:48:40 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"user_id"=>0, "content"=>"Im afraid to forget but more afraid I will never forget", "share"=>{"content"=>"Im afraid to forget but more afraid I will never forget", "user_id"=>0}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 5ms (ActiveRecord: 0.7ms | Allocations: 2259)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:49:28 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"Im afraid to forget but more afraid I will never forget"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 4ms (ActiveRecord: 0.6ms | Allocations: 2198)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (8.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Annonymous"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2022-08-28 03:52:52.393669"], ["updated_at", "2022-08-28 03:52:52.393669"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:53:45 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>0, "content"=>"I am afraid to forget, afraid to remember..."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms | Allocations: 2198)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:54:14 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"I am afraid to forget, afraid to remember..."}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mShare Create (5.9ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "I am afraid to forget, afraid to remember..."], ["user_id", 1], ["created_at", "2022-08-28 03:54:14.488968"], ["updated_at", "2022-08-28 03:54:14.488968"]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 16ms (ActiveRecord: 7.0ms | Allocations: 5183)
+
+
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-27 20:56:30 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"I am obsessed with knee-pits"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mShare Create (0.5ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "I am obsessed with knee-pits"], ["user_id", 1], ["created_at", "2022-08-28 03:56:30.961253"], ["updated_at", "2022-08-28 03:56:30.961253"]]
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `create'
+Completed 204 No Content in 7ms (ActiveRecord: 1.5ms | Allocations: 2766)
+
+
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
