@@ -3,7 +3,7 @@ class Api::SharesController < ApplicationController
   def show
     @share = Share.find(params[:id])
     if @share
-      render json: @share
+      render :show
     else
       @share = 'oh no it wasnt found shit'
     end
@@ -12,8 +12,7 @@ class Api::SharesController < ApplicationController
   def random
     shares = Share.all
     @share = shares.sample
-    debugger
-    render json: @share
+    render :random
   end
 
   def create

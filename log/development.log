@@ -381,3 +381,271 @@ Processing by Api::SharesController#create as */*
 Completed 204 No Content in 7ms (ActiveRecord: 1.5ms | Allocations: 2811)
 
 
+Started GET "/" for ::1 at 2022-08-29 09:28:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/postgres/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/postgres/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 603)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3116)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:05:31 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (1.0ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 15.4ms | Allocations: 10243)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:05:33 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 653)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:05:34 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 562)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:06:10 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 546)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:06:12 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 562)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:07:06 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 546)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:07:08 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 546)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:26:29 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 3549)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-29 11:40:26 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"I am afraid i will never again"}}
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:21:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:21:in `create'
+  [1m[36mShare Create (12.5ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "I am afraid i will never again"], ["user_id", 1], ["created_at", "2022-08-29 18:40:26.493097"], ["updated_at", "2022-08-29 18:40:26.493097"]]
+  ↳ app/controllers/api/shares_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:21:in `create'
+Completed 204 No Content in 55ms (ActiveRecord: 27.5ms | Allocations: 12808)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:40:43 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 595)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:40:45 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 546)
+
+
+Started GET "/api/shares/1" for 127.0.0.1 at 2022-08-29 11:46:11 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 6.7ms | Allocations: 3565)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 11:57:03 -0700
+  
+ActionController::RoutingError (uninitialized constant SharesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 11:57:11 -0700
+  
+ActionController::RoutingError (uninitialized constant SharesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:00:01 -0700
+  
+ActionController::RoutingError (uninitialized constant SharesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:02:11 -0700
+  
+ArgumentError ('/api/shares' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:6:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:02:59 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"random"}
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 404 Not Found in 17ms (ActiveRecord: 6.2ms | Allocations: 5318)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Share with 'id'=random):
+  
+app/controllers/api/shares_controller.rb:4:in `show'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:03:53 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"random"}
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 404 Not Found in 9ms (ActiveRecord: 4.5ms | Allocations: 2577)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Share with 'id'=random):
+  
+app/controllers/api/shares_controller.rb:4:in `show'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:04:39 -0700
+Processing by Api::SharesController#show as */*
+  Parameters: {"id"=>"random"}
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares" WHERE "shares"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:4:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 583)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Share with 'id'=random):
+  
+app/controllers/api/shares_controller.rb:4:in `show'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:04:55 -0700
+  
+ActionController::RoutingError (uninitialized constant SharesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:15:13 -0700
+  
+ActionController::RoutingError (uninitialized constant SharesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:18:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/share"):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:18:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/share"):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:19:29 -0700
+  
+ArgumentError ('/api/shares' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:6:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:20:01 -0700
+  
+ArgumentError ('/api::shares' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:6:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:20:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/share"):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:25:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/share"):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:28:57 -0700
+  
+ActionController::RoutingError (uninitialized constant ApiController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ApplicationController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/share" for 127.0.0.1 at 2022-08-29 12:29:13 -0700
+  
+ActionController::RoutingError (uninitialized constant ApiController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  ApplicationController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:30:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 39910ms (Views: 0.2ms | ActiveRecord: 10.6ms | Allocations: 148267)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:31:38 -0700
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:32:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 9052)
+
+
