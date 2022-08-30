@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
    get "/api/shares/random", :to => "api/shares#random"
   namespace :api, defaults: { format: JSON } do
-
+    resources :users, only: [ :create ]
   resources :shares, only: [ :create, :show ]
-   
+   resource :session, only: [ :show, :create, :destory ]
   end
 end
