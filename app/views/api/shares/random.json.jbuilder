@@ -1,1 +1,1 @@
-json.array! @share, :content
+json.array! @share

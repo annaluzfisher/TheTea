@@ -649,3 +649,1363 @@ Processing by Api::SharesController#random as */*
 Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 9052)
 
 
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:34:47 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:36:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 648)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:36:57 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 648)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 12:36:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 648)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:10:11 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 7.1ms | Allocations: 3607)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:11:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:35:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 9052)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:37:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:41:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 648)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:42:25 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 5234)
+
+
+  
+NoMethodError (undefined method `json' for #<Api::SharesController:0x00000000004560>
+
+    render json :random
+           ^^^^
+Did you mean?  JSON):
+  
+app/controllers/api/shares_controller.rb:16:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:42:57 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 3398)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:42:57 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 655)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:42:59 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 639)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:43:03 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 639)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:43:12 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.1ms | Allocations: 5122)
+
+
+  
+NoMethodError (undefined method `json' for #<Api::SharesController:0x000000000056b8>
+
+    render json :random
+           ^^^^
+Did you mean?  JSON):
+  
+app/controllers/api/shares_controller.rb:16:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:44:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.3ms | Allocations: 3377)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/api/shares_controller.rb:15:in `format'
+app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:45:51 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.1ms | Allocations: 3350)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/api/shares_controller.rb:15:in `format'
+app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:45:52 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms | Allocations: 677)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/api/shares_controller.rb:15:in `format'
+app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:45:54 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 661)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/api/shares_controller.rb:15:in `format'
+app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:48:40 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms | Allocations: 661)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/api/shares_controller.rb:15:in `format'
+app/controllers/api/shares_controller.rb:15:in `random'
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:51:14 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 3395)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:53:02 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 2.0ms | Allocations: 3641)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:55:25 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 741)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:28 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:42 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:51 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:54 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:54 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:55 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:56 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 726)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:57 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:56:59 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:57:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:57:02 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:57:03 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:57:53 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 13:59:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:01:51 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:02:09 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:02:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:03:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:06:09 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:06:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:07:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:07:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:11:32 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:12:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:15:08 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:15:43 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:15:55 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:16:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:16:27 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:17:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:18:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:18:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:20:26 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:20:28 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:21:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:25:12 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:25:25 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:26:26 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:27:07 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:28:50 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:34:53 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 8.6ms | Allocations: 3748)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:12 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:13 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:19 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 726)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:23 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 726)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:25 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:35:27 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 725)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-29 14:35:40 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"i hope your boy comes back"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mShare Create (0.7ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "i hope your boy comes back"], ["user_id", 1], ["created_at", "2022-08-29 21:35:40.879586"], ["updated_at", "2022-08-29 21:35:40.879586"]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+Completed 204 No Content in 28ms (ActiveRecord: 5.6ms | Allocations: 10756)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:42:28 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 6.1ms | Allocations: 3790)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:08 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:11 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:14 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:44:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 14:47:05 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:08:45 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.6ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 6.8ms | Allocations: 3588)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:09:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:11:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:13:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:13:35 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:13:36 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:13:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:12 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:12 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:13 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:14 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:14:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:20:58 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 6.3ms | Allocations: 3588)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:20:59 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:21:01 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:21:32 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:03 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:05 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:06 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:06 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:07 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:09 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 736)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:13 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:14 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:22:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-29 17:33:27 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>""}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+Completed 204 No Content in 17ms (ActiveRecord: 7.5ms | Allocations: 5219)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:16 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:17 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:19 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:19 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:19 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:19 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:20 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:23 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:23 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:23 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:34:23 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 735)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-29 17:45:23 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"I was walking down the street late at night and I abosolutely fell in love with fire-escapes. The romance in sitting out on one and watching the chaos of the city unfold... a cigarette.Dangling feet. I'll never love a human like I love urban fire escapes"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mShare Create (0.8ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "I was walking down the street late at night and I abosolutely fell in love with fire-escapes. The romance in sitting out on one and watching the chaos of the city unfold... a cigarette.Dangling feet. I'll never love a human like I love urban fire escapes"], ["user_id", 1], ["created_at", "2022-08-30 00:45:23.928008"], ["updated_at", "2022-08-30 00:45:23.928008"]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+Completed 204 No Content in 20ms (ActiveRecord: 8.9ms | Allocations: 5655)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:32 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.4ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 746)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:32 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 746)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:33 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:36 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 746)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:45:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:52:15 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 3624)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:24 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:26 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:28 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 746)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:30 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:31 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:32 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:36 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:37 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:39 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:39 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:40 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:41 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:41 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:42 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:43 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:43 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:44 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:44 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:45 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:45 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:45 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:46 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:46 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:46 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:47 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-29 17:53:47 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 745)
+
+

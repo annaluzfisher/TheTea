@@ -12,7 +12,7 @@ class Api::SharesController < ApplicationController
   def random
     shares = Share.all
     @share = shares.sample
-    render :random
+   render json: @share
   end
 
   def create
