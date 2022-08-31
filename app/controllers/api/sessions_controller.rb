@@ -1,29 +1,33 @@
 class Api::SessionsController < ApplicationController
 
   def show
-    
-  end
-
-  def create
-    #expect params to have username and password 
-    username = params[:username]
-    password = params[:password]
-    #{user : {username: '', password : '' }}
-    # {username: '', password: ''}
-    @user = User.find_by_credentials(username, password)
-    if @user
-      login!(@user)
-      render 'api/users/show'
+    @user = User.find_by(session_token: session[:session_token])
+  if   @user
+    render json: { user:  @user } 
     else
-      # render json: { errors: ['Invalid credentials'] }, status: 422
       render json: { user: nil }
     end
   end
 
-  def destory
-    logout if logged_in?
-    render head :no_content
-    ## response will have no body. need to render something
+  def create
+    @user = User.find_by_credentials(params[:credential],params[:password])
+
+    if @user
+      login!(@user)
+      render json: { user:  @user }
+    else
+      render json: { errors: ['The provided credentials were invalid.']}, status: 422
+    end
+  end
+
+  def destroy
+      @user = User.find_by(session_token: session[:session_token])
+  if   @user
+      logout
+      render json: { message: 'success' }
+    else
+       render json: { message: 'fail' }
+    end
   end
 
 end
