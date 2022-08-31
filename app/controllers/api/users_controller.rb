@@ -7,7 +7,7 @@ wrap_parameters include: User.attribute_names + ['password']
      @user = User.new(user_params)
      if @user.save!
       login!(@user)
-      render json: @user
+      render :show
      else
       render json: { errors: @user.errors.full_messages }, status: 422
      end
