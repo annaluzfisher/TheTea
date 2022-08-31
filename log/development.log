@@ -2102,3 +2102,163 @@ Processing by Api::SessionsController#create as */*
 Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1139)
 
 
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-30 19:08:35 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"The audacity of that child (because she's barely a woman) to look me in the eyes and lie to my face! And then try and 'steal' my lover seconds after I had tried to have a heart to heart with her. I'm amazed."}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | Allocations: 319)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:42 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.9ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 9.4ms | Allocations: 6618)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:45 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1014)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:46 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1018)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:47 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:49 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1028)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:49 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1010)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:35:51 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1007)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 19:36:02 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-30 21:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/api/shares" for 127.0.0.1 at 2022-08-30 21:18:37 -0700
+Processing by Api::SharesController#create as */*
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"i am frustrated"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | Allocations: 164)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:18:50 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 4141)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:18:55 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1013)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:18:56 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1007)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:18:57 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:19:02 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1007)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:19:02 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1022)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-30 21:19:03 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1010)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 09:54:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (2.8ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 29ms (Views: 0.8ms | ActiveRecord: 6.5ms | Allocations: 10001)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 09:54:18 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.3ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1177)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 09:54:21 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 09:54:22 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1036)
+
+
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/users" for 127.0.0.1 at 2022-08-31 10:37:31 -0700
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
