@@ -1,0 +1,36 @@
+.form-wrapper{
+  width: 80vw;
+  height: 60vh;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(182, 182, 245);
+  color:blueviolet;
+  margin: 5%;
+}
+form{
+  height: inherit;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+textarea{
+  height: 80%;
+  width: 90%;
+}
+input {
+  color: rgb(101, 2, 102);
+  background-color:rgb(169, 243, 251);
+    border: .5px solid gray;
+  border-radius: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
