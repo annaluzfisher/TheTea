@@ -4505,3 +4505,78 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 216ms (Views: 0.6ms | ActiveRecord: 11.7ms | Allocations: 8823)
 
 
+Started GET "/api/session" for 127.0.0.1 at 2022-09-01 09:12:04 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 1.6ms | Allocations: 507)
+Completed 200 OK in 38ms (Views: 9.8ms | ActiveRecord: 8.2ms | Allocations: 11949)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-09-01 09:12:04 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 73)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1193)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-09-01 09:12:17 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (2.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-09-01 16:12:17.256301"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 73)
+Completed 200 OK in 209ms (Views: 0.9ms | ActiveRecord: 7.0ms | Allocations: 7086)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-09-01 09:42:34 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 9.1ms | Allocations: 7885)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-09-01 09:42:38 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+
+Started POST "/api/shares" for 127.0.0.1 at 2022-09-01 09:44:07 -0700
+Processing by Api::SharesController#create as JSON
+  Parameters: {"share"=>{"user_id"=>1, "content"=>"anna is the cutest"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mShare Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "shares" WHERE "shares"."content" = $1 LIMIT $2[0m  [["content", "anna is the cutest"], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mShare Create (1.5ms)[0m  [1m[32mINSERT INTO "shares" ("content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "anna is the cutest"], ["user_id", 1], ["created_at", "2022-09-01 16:44:07.278776"], ["updated_at", "2022-09-01 16:44:07.278776"]]
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shares_controller.rb:20:in `create'
+  Rendering api/shares/create.json.jbuilder
+  Rendered api/shares/create.json.jbuilder (Duration: 0.3ms | Allocations: 150)
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 3.5ms | Allocations: 7659)
+
+
