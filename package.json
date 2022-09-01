@@ -9,7 +9,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "build": "npm install --prefix frontend && npm run build --prefix teafrontend"
+    "build": "npm install --prefix teafrontend && npm run build --prefix teafrontend"
   },
   "repository": {
     "type": "git",
