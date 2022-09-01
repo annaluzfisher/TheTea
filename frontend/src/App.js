@@ -1,7 +1,7 @@
 
 import NavBar from "./components/NavBar";
 import NavRight from "./components/NavRight";
-import { restoreCSRF } from "./store/csrf";
+// import { restoreCSRF } from "./store/csrf";
 import Home from "./components/Home/index";
 import About from "./components/About/index";
 import Share from "./components/Share/index";
@@ -10,9 +10,6 @@ import { Switch, Route} from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function App() {
-  if (sessionStorage.getItem('X-CSRF-Token') === null){
-    restoreCSRF();
-  }
 
 
   console.log("Welcome * ~ Happy you're here ~")

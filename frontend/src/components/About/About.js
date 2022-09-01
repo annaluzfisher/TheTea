@@ -17,7 +17,7 @@ function About() {
     <>
         <div className={`about ${visible ? '' : 'hidden'}`}>
           <header>
-            <i class="fa-regular fa-rectangle-xmark" onClick={handleClick}></i>
+            <i className="fa-regular fa-rectangle-xmark" onClick={handleClick}></i>
           </header>
           <div>
             Liam Noah Oliver Elijah James William Benjamin Lucas Henry Theodore

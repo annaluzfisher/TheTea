@@ -65,20 +65,3 @@ function Form(props) {
 export default Form;
 
 
-// flow: make a local state of user with the user inputs (also local state)
-//on submit make that user and check if credentials match aka
-//fetch a get to back end to see if user? or to start a new session??
-//both?
-// if response ok then we useSelector to set the global state session to ...  the user?
-// do we have a current user slice of state or is that in session??
-// need to import correstpond action reaters into componeney
-// diffeent if log in user vs sing up \user  vs whatever
-
-//even theough they might go in to reducer the same 
-// need to make user reducer which just has create and delete.
-// may not need users lice of state if just need current user mno need look at profiles 
-// ask about logger
-
-//what does useParams return when not a wildcard?
-//how to pass props through nav links
-//what is location/history
