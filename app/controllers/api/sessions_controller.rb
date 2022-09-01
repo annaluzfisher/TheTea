@@ -3,7 +3,7 @@ class Api::SessionsController < ApplicationController
   def show
     @user = User.find_by(session_token: session[:session_token])
   if   @user
-   render 'api/users/show'
+   render :show
     else
       render json: { user: nil }
     end

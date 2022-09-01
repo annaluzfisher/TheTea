@@ -3623,3 +3623,885 @@ Processing by Api::SessionsController#create as JSON
 Completed 200 OK in 204ms (Views: 0.8ms | ActiveRecord: 2.4ms | Allocations: 5733)
 
 
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:27:05 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:27:05.787823"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.3ms | Allocations: 72)
+Completed 200 OK in 218ms (Views: 0.9ms | ActiveRecord: 8.5ms | Allocations: 8641)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:29:02 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:29:02.470947"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.4ms | Allocations: 72)
+Completed 200 OK in 204ms (Views: 1.0ms | ActiveRecord: 2.3ms | Allocations: 5745)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:30:04 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:30:05.173685"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.3ms | Allocations: 72)
+Completed 200 OK in 209ms (Views: 0.9ms | ActiveRecord: 2.5ms | Allocations: 5742)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:30:51 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:30:51.521479"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 203ms (Views: 0.7ms | ActiveRecord: 2.3ms | Allocations: 5739)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:32:26 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:32:27.089647"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 205ms (Views: 0.8ms | ActiveRecord: 2.6ms | Allocations: 5766)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:33:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:33:27.756760"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 207ms (Views: 0.8ms | ActiveRecord: 2.4ms | Allocations: 5745)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:34:02 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:34:02.770729"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 209ms (Views: 0.8ms | ActiveRecord: 2.7ms | Allocations: 5740)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:34:18 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:34:18.989493"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 211ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 5748)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:35:19 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:35:19.302832"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 207ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 5727)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:36:50 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:36:50.899117"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 206ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 5733)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:37:22 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:37:22.583912"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 206ms (Views: 0.7ms | ActiveRecord: 2.7ms | Allocations: 5739)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:37:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 848)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:37:35 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:37:35.700902"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 207ms (Views: 0.7ms | ActiveRecord: 2.7ms | Allocations: 5742)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:39:28 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:39:29.132637"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 203ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 5730)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 15:41:42 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 22:41:42.850820"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 204ms (Views: 0.7ms | ActiveRecord: 2.2ms | Allocations: 5733)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:13:50 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:13:50.756627"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 219ms (Views: 0.7ms | ActiveRecord: 10.4ms | Allocations: 8674)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:15:10 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:15:10.857126"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 205ms (Views: 0.6ms | ActiveRecord: 2.5ms | Allocations: 5748)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:17:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:17:12.067493"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 201ms (Views: 0.7ms | ActiveRecord: 2.6ms | Allocations: 5749)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:18:02 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:18:02.825064"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.3ms | Allocations: 72)
+Completed 200 OK in 212ms (Views: 0.9ms | ActiveRecord: 3.3ms | Allocations: 5736)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:18:02 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 836)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:18:53 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:18:53.644082"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 200ms (Views: 0.8ms | ActiveRecord: 2.4ms | Allocations: 5751)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:19:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:19:27.700135"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 205ms (Views: 0.6ms | ActiveRecord: 2.5ms | Allocations: 5745)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:21:32 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:21:32.814878"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 203ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 5745)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:23:23 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:23:23.870752"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 208ms (Views: 0.8ms | ActiveRecord: 2.6ms | Allocations: 5728)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:26:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:26:27.933442"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 207ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 5724)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:27:44 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:27:44.477660"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 206ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 5727)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:28:06 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:28:07.041678"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 204ms (Views: 0.7ms | ActiveRecord: 2.1ms | Allocations: 5736)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:29:39 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:29:39.820605"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 199ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 5733)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:37:01 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:37:01.840730"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 115)
+Completed 200 OK in 223ms (Views: 2.1ms | ActiveRecord: 8.9ms | Allocations: 13352)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:38:07 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test2", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test2", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test2"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test2"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test2@email.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:38:07.840572"], ["id", 4]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 200ms (Views: 0.7ms | ActiveRecord: 2.4ms | Allocations: 6024)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:38:38 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 104)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1385)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:38:38 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1005)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:39:34 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1032)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:39:34 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1032)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:39:36 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1026)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:39:36 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 57ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 1026)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:40:04 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1017)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:40:04 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1017)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:41:16 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1014)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:41:16 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1014)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:43:26 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 72)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1023)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2022-08-31 16:43:26 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:4:in `show'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1023)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:43:40 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:43:40.618519"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.2ms | Allocations: 72)
+Completed 200 OK in 199ms (Views: 0.6ms | ActiveRecord: 3.4ms | Allocations: 5828)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 16:50:14 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-08-31 23:50:14.878694"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.8ms | Allocations: 72)
+Completed 200 OK in 216ms (Views: 1.2ms | ActiveRecord: 8.8ms | Allocations: 8755)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 18:04:24 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.5ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 43ms (Views: 0.8ms | ActiveRecord: 14.6ms | Allocations: 7796)
+
+
+Started GET "/api/shares/random" for 127.0.0.1 at 2022-08-31 18:07:24 -0700
+Processing by Api::SharesController#random as */*
+  [1m[36mShare Load (0.2ms)[0m  [1m[34mSELECT "shares".* FROM "shares"[0m
+  ↳ app/controllers/api/shares_controller.rb:14:in `random'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1051)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2022-08-31 18:30:55 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"username"=>"test", "email"=>"", "password"=>"[FILTERED]", "session"=>{"username"=>"test", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:22:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:39:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "test"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@email.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-09-01 01:30:55.810491"], ["id", 3]]
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28:in `reset_session_token!'
+  Rendering api/sessions/show.json.jbuilder
+  Rendered api/sessions/show.json.jbuilder (Duration: 0.1ms | Allocations: 87)
+Completed 200 OK in 216ms (Views: 0.6ms | ActiveRecord: 11.7ms | Allocations: 8823)
+
+
